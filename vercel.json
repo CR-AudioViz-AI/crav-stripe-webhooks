@@ -1,22 +1,12 @@
 {
-  "version": 2,
-  "name": "crav-stripe-webhooks",
-  "builds": [
-    {
-      "src": "api/webhooks/stripe.js",
-      "use": "@vercel/node"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "github": {
+    "autoAlias": false,
+    "silent": true
+  },
+  "git": {
+    "deploymentEnabled": {
+      "main": false
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/webhooks/stripe",
-      "dest": "/api/webhooks/stripe.js"
-    }
-  ],
-  "env": {
-    "STRIPE_SECRET_KEY": "@stripe-secret-key",
-    "STRIPE_WEBHOOK_SECRET": "@stripe-webhook-secret",
-    "SUPABASE_URL": "@supabase-url",
-    "SUPABASE_SERVICE_ROLE_KEY": "@supabase-service-role-key"
   }
 }
